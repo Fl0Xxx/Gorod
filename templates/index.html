@@ -5,9 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-{% for app in apps %}
-<h2>{{ app.child_fio_de }}</h2>
-<h2>{{ app.date_of_birth }}</h2>
-{% endfor %}
+    <a href="{% url 'test' %}"> Test page </a>
+
+    {% for app in apps %}
+    <h2>{{ app.child_fio_de }}</h2>
+    <h2>{{ app.date_of_birth }}</h2>
+    {% endfor %}
+
 </body>
 </html>
