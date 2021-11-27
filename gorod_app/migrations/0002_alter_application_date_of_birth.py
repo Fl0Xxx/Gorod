@@ -16,3 +16,5 @@ class Migration(migrations.Migration):
             field=models.DateField(),
         ),
     ]
+
+# ??? how it works

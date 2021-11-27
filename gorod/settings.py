@@ -71,21 +71,31 @@ TEMPLATES = [
 WSGI_APPLICATION = 'gorod.wsgi.application'
 
 
-# Database
+# PostgreSQL Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'goroddb',
+#         'USER': 'postgres',
+#         'PASSWORD': 'yor_new_password',
+#         'HOST':  'localhost',
+#         'PORT':  '5432',
+#     }
+# }
 
+# MySQL Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'goroddb',
-        'USER': 'postgres',
-        'PASSWORD': 'yor_new_password',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gorod',
+        'USER': 'root',
+        'PASSWORD': 'Password',
         'HOST':  'localhost',
-        'PORT':  '5432',
+        'PORT':  '3306',
     }
 }
-
 
 
 # Password validation
