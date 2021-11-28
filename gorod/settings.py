@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'goroddb',
         'USER': 'postgres',
-        'PASSWORD': 'yor_new_password',
+        'PASSWORD': 'new_password',
         'HOST':  'localhost',
         'PORT':  '5432',
     }
