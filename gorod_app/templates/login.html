@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1 class="product_title text-center">
+            Login or Create a New Account
+        </h1>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-lg-6 text-center custom_div">
+                <br>
+                <h2 class="product_title">
+                    New User
+                </h2>
+                <br>
+                <a href="{% url 'signup' %}" class="btn btn-secondary">
+                    Create New User
+                </a>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 bg-light">
+                <div>
+                    <br>
+                    <h2 class="product_title">
+                        Registered Users Only
+                    </h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <p>{{ form | crispy }}</p>
+                        <button type="submit" class="btn btn-secondary">
+                            Log in
+                        </button>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        {% if request.user.is_authenticated and request.user.first_name %}
+        <h1>Welcome {{ request.user.first_name }}!</h1>
+        {% else %}
+        <h1>Hello World!</h1>
+        {% endif %}
+
+        <div>
+            <a href="{% url 'test' %}"> Test page </a>
+        </div>
+        <div>
+            <a href="{% url 'signup' %}"> Sign up </a>
+        </div>
+        <div>
+            <a href="{% url 'login' %}"> Login </a>
+        </div>
+        <div>
+            <a href="{% url 'logout' %}"> Logout </a>
+        </div>
+        <!--
+        {% for app in apps %}
+        <h2>{{ app.child_fio_de }}</h2>
+        <h2>{{ app.date_of_birth }}</h2>
+        {% endfor %}
+        -->
+    </div>
+</body>
+</html>
