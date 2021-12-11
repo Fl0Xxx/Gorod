@@ -10,30 +10,51 @@
 </head>
 <body>
     <div class="container">
-        {% if request.user.is_authenticated and request.user.first_name %}
-        <h1>Welcome {{ request.user.first_name }}!</h1>
-        {% else %}
-        <h1>Hello World!</h1>
-        {% endif %}
-
         <div>
-            <a href="{% url 'test' %}"> Test page </a>
+            <a href="{% url 'test' %}"> Testpage </a>
+        </div>
+
+        {% if request.user.is_authenticated and request.user.first_name %}
+        <h1> Welcome {{ request.user.first_name }}! </h1>
+        <div>
+            <a href="{% url 'home' %}"> Mainpage </a>
         </div>
         <div>
-            <a href="{% url 'signup' %}"> Sign up </a>
+            <a href="{% url 'profile' %}"> Profile </a>
+        </div>
+        <div>
+            <a href="{% url '/' %}"> My applications </a>
+        </div>
+        <div>
+            <a href="{% url 'courses' %}"> Courses </a>
+        </div>
+        <div>
+            <a href="{% url 'about' %}"> About </a>
+        </div>
+        <div>
+            <a href="{% url 'logout' %}"> Logout </a>
+        </div>
+        <div>
+            <a href="{% url '/' %}"> Create a new application </a>
+        </div>
+        {% else %}
+        <h1> Start page </h1>
+        <div>
+            <a href="{% url 'home' %}"> Mainpage </a>
+        </div>
+        <div>
+            <a href="{% url 'courses' %}"> Courses </a>
+        </div>
+        <div>
+            <a href="{% url 'about' %}"> About </a>
         </div>
         <div>
             <a href="{% url 'login' %}"> Login </a>
         </div>
         <div>
-            <a href="{% url 'logout' %}"> Logout </a>
+            <a href="{% url 'signup' %}"> Sign up </a>
         </div>
-        <!--
-        {% for app in apps %}
-        <h2>{{ app.child_fio_de }}</h2>
-        <h2>{{ app.date_of_birth }}</h2>
-        {% endfor %}
-        -->
+        {% endif %}
     </div>
 </body>
 </html>

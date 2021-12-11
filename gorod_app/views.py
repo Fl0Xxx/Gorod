@@ -18,7 +18,7 @@ def test(request):
     return render(request, 'test.html')
 
 
-def signUpView(request):
+def sign_up_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -51,4 +51,20 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect('/')
+
+
+# Page with user profile info
+def profile(request):
+    return render(request, 'profile.html')
+
+# Page with list of courses
+# how to get list of courses from DB?
+def courses(request):
+    return render(request, 'courses.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
