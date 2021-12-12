@@ -28,7 +28,7 @@ To use MySQL or PostgreSQL DB:
 
 ## Known issues:
 **Error** - **Solution:**
-1. OSError: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: frozen importlib._bootstrap
+1. OSError: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: frozen importlib._bootstrap  
 Run command 
 > pip install django-crispy-forms
 
