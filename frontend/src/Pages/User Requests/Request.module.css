@@ -1,0 +1,32 @@
+.request {
+    display: grid;
+    grid-template-areas: "name crs state prd date";
+    grid-template-columns: 3fr 3fr 1fr 2fr 2fr;
+    margin-left: 15%;
+    margin-top: 3%;
+    margin-right: 15%;
+    background-color: rgba(0, 255, 13, 0.34);
+    font-style: normal;
+    font-size: large;
+    border-radius: 50px;
+}
+
+.name {
+    grid-area: name;
+}
+
+.course {
+    grid-area: crs;
+}
+
+.date {
+    grid-area: date;
+}
+
+.state {
+    grid-area: state;
+}
+
+.period {
+    grid-area: prd;
+}

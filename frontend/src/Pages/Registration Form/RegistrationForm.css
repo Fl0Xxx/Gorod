@@ -1,0 +1,61 @@
+#register .container #register-row #register-column #register-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 700px;
+    border: 1px solid #9C9C9C;
+    background-color: #878787;
+}
+#register .container #register-row #register-column #register-box #register-form {
+    padding: 20px;
+}
+
+.form-group{
+    height: 20%;
+    padding: 5%;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+
+#register .container #register-row #register-column #register-box #register-form #register-link {
+    margin-top: -85px;
+}
+.nl-reg{
+    color:#FECC00;
+    text-decoration: none;
+}
+.checkbox{
+    margin-top: 10px;
+    margin-left: 8px;
+}
+.text-label{
+    color: chocolate;
+}
+
+.form-control{
+    border-color: #FECC00;
+}
+
+.sbm{
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #FECC00;
+}
+.sbm:hover{
+    background-color: white;
+    color: #FECC00;
+    border: 1px solid #FECC00;;
+}

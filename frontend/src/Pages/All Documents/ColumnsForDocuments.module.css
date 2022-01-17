@@ -1,0 +1,57 @@
+.request {
+    display: grid;
+    grid-template-areas: "kid_fio_german kid_fio_russian course kid_day_of_birth parent_fio_german parent_fio_russian address_german home_phone phone email date prd state";
+    grid-template-columns: 3fr 3fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 15%;
+    margin-top: 3%;
+    margin-right: 15%;
+    background-color: azure;
+    font-style: normal;
+    font-size: large;
+    border-radius: 50px;
+}
+
+.kid_fio_german {
+    grid-area: kid_fio_german;
+}
+
+.kid_fio_russian {
+    grid-area: kid_fio_russian;
+}
+
+.kid_day_of_birth {
+    grid-area: kid_day_of_birth;
+}
+
+.parent_fio_german {
+    grid-area: parent_fio_german;
+}
+
+.parent_fio_russian {
+    grid-area: parent_fio_russian;
+}
+
+.address_german {
+    grid-area: address_german;
+}
+.home_phone {
+    grid-area: home_phone;
+}
+.phone {
+    grid-area: phone;
+}
+.email {
+    grid-area: email;
+}
+.date {
+    grid-area: date;
+}
+.period {
+    grid-area: prd;
+}
+.course {
+    grid-area: course;
+}
+.state {
+    grid-area: state;
+}

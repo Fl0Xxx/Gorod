@@ -1,0 +1,5 @@
+settings.py (add 'rest_framework' and 'corsheaders' to 'INSTALLED_APPS')
+pip install django djangorestframework django-cors-headers
+settings.py (add 'corsheaders.middleware.CorsMiddleware' to 'MIDDLEWARE')
+
+

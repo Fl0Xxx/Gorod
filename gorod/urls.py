@@ -17,7 +17,23 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from gorod_app import views
+from django.conf.urls import url
 
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    url(r'^api/registration/$', views.registration),
+    url(r'^api/authentication/$', views.login),
+    url(r'^api/logout/$', views.logout),
+    # url(r'^api/customers/$', views.customers_list),
+    # url(r'^api/customers/(?P<pk>[0-9]+)$', views.customers_detail),
+]
+
+
+
+
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('gorod_app.urls')),
@@ -26,3 +42,4 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
+"""

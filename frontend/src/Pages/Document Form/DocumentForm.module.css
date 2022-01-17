@@ -1,0 +1,264 @@
+.container {
+    margin-left: 15%;
+    display: grid;
+    grid-template-areas: "title title title title"
+            "kid_name_g kid_ng_inp kid_sname_g kid_sng_inp"
+            "geb geb_inp empty empty"
+            "kid_name_r kid_nr_inp kid_sname_r kid_snr_inp"
+            "par_g par_g_inp par_r par_r_inp"
+            "adr adr_inp tel tel_inp"
+            "handy handy_inp email email_inp"
+            "minuten minuten minuten minuten"
+            "courses courses courses courses"
+            "btn2 btn2 btn2 btn2";
+    grid-template-columns: 20% 20% 20% 24%;
+}
+
+.empty {
+    grid-area: empty;
+}
+
+.title {
+    grid-area: title;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.kid_name_german {
+    grid-area: kid_name_g;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.kid_name_german_inp {
+    grid-area: kid_ng_inp;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.kid_surname_german {
+    grid-area: kid_sname_g;
+    margin-left: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.kid_surname_german_inp {
+    grid-area: kid_sng_inp;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.kid_name_russian {
+    grid-area: kid_name_r;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.kid_name_russian_inp {
+    grid-area: kid_nr_inp;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.kid_surname_russian {
+    grid-area: kid_sname_r;
+    margin-left: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.kid_surname_russian_inp {
+    grid-area: kid_snr_inp;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.geb {
+    grid-area: geb;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.geb_inp {
+    grid-area: geb_inp;
+    height: 50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.par_germ {
+    grid-area: par_g;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.par_germ_inp {
+    grid-area: par_g_inp;
+    height: 50px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.par_rus {
+    grid-area: par_r;
+    margin-left: 10px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.par_rus_inp {
+    grid-area: par_r_inp;
+    height: 50px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.adr {
+    grid-area: adr;
+    margin-bottom: 2%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.adr_inp {
+    grid-area: adr_inp;
+    height: 50px;
+    margin-bottom: 4%;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.tel {
+    grid-area: tel;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.tel_inp {
+    grid-area: tel_inp;
+    height: 50px;
+    margin-bottom: 4%;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.handy {
+    grid-area: handy;
+    margin-bottom: 4%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.handy_inp {
+    grid-area: handy_inp;
+    height: 50px;
+    margin-bottom: 4%;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.email {
+    grid-area: email;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.email_inp {
+    grid-area: email_inp;
+    height: 50px;
+    margin-bottom: 4%;
+    background: #FFFFFF;
+    border: 2px solid #FECC00;
+    border-radius: 20px;
+}
+
+.minuten {
+    grid-area: minuten;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.courses{
+    grid-area: courses;
+    margin-left: 35%;
+}
+
+
+
+.btn2 {
+    grid-area: btn2;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

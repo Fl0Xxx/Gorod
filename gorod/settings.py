@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gorod_app.apps.GorodAppConfig',
     'crispy_forms',
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -47,7 +49,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
+
+
+MIDDLEWARE_CLASSES = ('corsheaders.middleware.CorsMiddleware', 'django.middleware.common.CommonMiddleware',)
 
 ROOT_URLCONF = 'gorod.urls'
 
@@ -72,18 +78,20 @@ WSGI_APPLICATION = 'gorod.wsgi.application'
 # PostgreSQL Database configuration
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'goroddb',
-#         'USER': 'postgres',
-#         'PASSWORD': '1234',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gorod',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
 
 # MySQL Database configuration
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -94,7 +102,7 @@ DATABASES = {
         'PORT':  '3306',
     }
 }
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -143,3 +151,11 @@ STATIC_ROOT = BASE_DIR / 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = (
+       'https://localhost:3000',
+)
+
+AUTH_USER_MODEL = 'gorod_app.Customererer'

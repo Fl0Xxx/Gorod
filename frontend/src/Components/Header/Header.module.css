@@ -1,0 +1,74 @@
+.header{
+grid-area: h;
+    display: grid;
+    grid-template-areas: "logo rus deu main_page requests courses teachers about_us contacts exit";
+    grid-template-rows: 100px ;
+    grid-template-columns: 18% 3% 8% 7% 10% 6% 12% 6% 22% 8% ;
+}
+.header2{
+    grid-area: h;
+    display: grid;
+    grid-template-areas: "logo rus deu main_page courses about_us contacts sign_in sign_up";
+    grid-template-rows: 100px ;
+    grid-template-columns: 17% 2% 10% 10% 9% 9% 25% 6% 5% ;
+}
+.text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 100px;
+    text-decoration: none;
+
+    color: #717171;
+}
+.requests{
+    grid-area: requests;
+}
+.teachers{
+    grid-area: teachers;
+}
+.lang{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100px;
+    text-decoration: none;
+
+    color: #717171;
+}
+.header_logo{
+    grid-area: logo;
+    width: 238px;
+    height:100px;
+    margin-top:10px;
+    margin-left: 40px;
+}
+.rus{
+    grid-area: rus;
+}
+.deu{
+    grid-area: deu;
+}
+.main{
+    grid-area: main_page;
+}
+.courses{
+    grid-area: courses;
+}
+.about_us{
+    grid-area: about_us;
+}
+.contacts{
+    grid-area: contacts;
+}
+.exit{
+    grid-area: exit;
+}
+.sign_in{
+    grid-area: sign_in;
+}
+.sign_up{
+    grid-area: sign_up;
+}
