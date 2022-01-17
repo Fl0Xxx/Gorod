@@ -54,15 +54,18 @@ const RegistrationForm = (props) => {
 
     let onSubmit = () => {
         const url = `${BACKEND_URL}/api/registration/`;
-        axios.post(url, {login: login.current.value,
-                         password: password.current.value,
-                         password2: password2.current.value,
+        let a = axios.post(url, {
                          email: email.current.value,
-                         address: address.current.value,
+                         username: login.current.value,
+                         password: password.current.value,
                          fio: fio.current.value,
-                         phnumber: phnumber.current.value,
-                         hphnumber: hphnumber.current.value})
-        console.log('1')
+                         address: address.current.value,
+                         mobile: phnumber.current.value,
+                         home: hphnumber.current.value})
+
+        console.log("################")
+        console.log(a)
+        console.log("################")
         return false;
     }
 

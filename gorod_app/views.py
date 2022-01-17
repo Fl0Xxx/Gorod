@@ -1,15 +1,80 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
-from .models import Customererer
+from .models import CustomerGorod
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .serializers import *
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework import status
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializers import LoginSerializer
+from .serializers import RegistrationSerializer
 
 
-@api_view(['GET', 'POST'])
+class RegistrationAPIView(APIView):
+    """
+    Registers a new user.
+    """
+    permission_classes = [AllowAny]
+    serializer_class = RegistrationSerializer
+
+    def post(self, request):
+        """
+        Creates a new User object.
+        Username, email, and password are required.
+        Returns a JSON web token.
+        """
+        print('1')
+        print(request.data)
+        serializer = self.serializer_class(data=request.data)
+        print('2')
+        serializer.is_valid(raise_exception=True)
+        print(serializer.errors)
+        print('3')
+        serializer.save()
+        print('4')
+        return Response(
+            {
+                'token': serializer.data.get('token', None),
+            },
+            status=status.HTTP_201_CREATED,
+        )
+
+
+class LoginAPIView(APIView):
+    """
+    Logs in an existing user.
+    """
+    permission_classes = [AllowAny]
+    serializer_class = LoginSerializer
+
+    def post(self, request):
+        """
+        Checks is user exists.
+        Email and password are required.
+        Returns a JSON web token.
+        """
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
+
+
+
+
+
+
+
+
+"""
+# @api_view(['GET', 'POST'])
 def registration(request):
     if request.method == 'POST':
         print(request.data)
@@ -45,6 +110,8 @@ def login(request):
 def logout(request):
     logout(request)
     return Response()
+
+"""
 
 
 """

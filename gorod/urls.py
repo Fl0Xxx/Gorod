@@ -23,13 +23,12 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^api/registration/$', views.registration),
-    url(r'^api/authentication/$', views.login),
-    url(r'^api/logout/$', views.logout),
+    url(r'^api/registration/$', views.RegistrationAPIView.as_view(), name='user_registration'),
+    url(r'^api/authentication/$', views.LoginAPIView.as_view(), name='user_login'),
+    # url(r'^api/logout/$', views.logout),
     # url(r'^api/customers/$', views.customers_list),
     # url(r'^api/customers/(?P<pk>[0-9]+)$', views.customers_detail),
 ]
-
 
 
 

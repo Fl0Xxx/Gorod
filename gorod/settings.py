@@ -158,4 +158,14 @@ CORS_ORIGIN_WHITELIST = (
        'https://localhost:3000',
 )
 
-AUTH_USER_MODEL = 'gorod_app.Customererer'
+AUTH_USER_MODEL = 'gorod_app.CustomerGorod'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+        ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'gorod_app.backends.JWTAuthentication',
+        )
+}
