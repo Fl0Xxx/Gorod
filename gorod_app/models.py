@@ -135,13 +135,15 @@ class CustomerGorod(AbstractBaseUser, PermissionsMixin):
         этого пользователя и срок его действия
         составляет 60 дней в будущем.
         """
+        # token = jwt.encod({
+        #     'id': self.pk,
+        #     'exp': int(dt.strftime('%s'))
+        # }, settings.SECRET_KEY, algorithm='HS256')
+        #
+        # return token.decode('utf-8')
         dt = datetime.now() + timedelta(days=60)
-        token = jwt.encode({
-            'id': self.pk,
-            'exp': int(dt.strftime('%S'))
-        }, settings.SECRET_KEY, algorithm='HS256')
-
-        return token.decode('utf-8')
+        token = jwt.encode({'id': self.pk, 'exp': dt}, settings.SECRET_KEY, algorithm='HS256')
+        return jwt.decode(token, settings.SECRET_KEY, algorithms=["HS256"])
 
 
 

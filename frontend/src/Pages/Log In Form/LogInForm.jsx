@@ -11,8 +11,7 @@ const LogInForm = (props) => {
     let enter = () => {
         const url = `${BACKEND_URL}/api/authentication/`;
         let a = axios.post(url, {login: login.current.value,
-                                 password: password.current.value})
-        console.log(a)
+                                 password: password.current.value}).then(function (response) {console.log(response);})
         return false;
         // props.dispatch(enterActionCreator())
     }

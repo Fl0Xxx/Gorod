@@ -62,10 +62,9 @@ const RegistrationForm = (props) => {
                          address: address.current.value,
                          mobile: phnumber.current.value,
                          home: hphnumber.current.value})
-
-        console.log("################")
-        console.log(a)
-        console.log("################")
+        let token = a.then(function(result) {
+            return result.data.token;
+        });
         return false;
     }
 
