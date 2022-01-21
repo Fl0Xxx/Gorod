@@ -16,6 +16,8 @@ Using Powershell:
 Install libraries:
 > pip install django-crispy-forms
 > pip install mysqlclient
+> pip install psycopg2-binary
+> pip install psycopg2
 5. Run django server
 > py manage.py runserver
 
